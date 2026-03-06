@@ -100,6 +100,10 @@ class StockAnalysisPipeline:
             logger.info("筹码分布分析已启用")
         else:
             logger.info("筹码分布分析已禁用")
+        if self.config.enable_eastmoney_patch:
+            logger.info("东方财富补丁已启用")
+        else:
+            logger.info("东方财富补丁已禁用")
         if self.search_service.is_available:
             logger.info("搜索服务已启用 (Tavily/SerpAPI)")
         else:
