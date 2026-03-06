@@ -1073,8 +1073,9 @@ class DataFetcherManager:
             return None
         
         # 获取配置的数据源优先级
+        logger.info(f"[实时行情] 数据源 {config.realtime_source_priority}")
         source_priority = config.realtime_source_priority.split(',')
-        
+
         errors = []
         # primary_quote holds the first successful result; we may supplement
         # missing fields (volume_ratio, turnover_rate, etc.) from later sources.
